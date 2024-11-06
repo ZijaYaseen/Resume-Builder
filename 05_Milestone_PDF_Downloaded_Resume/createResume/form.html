@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    <section class="resume-info">
+        <form id="resumeForm" method="post">
+            <h1>Fill in Your Details</h1>
+            <!-- Contact details section -->
+            <h2>Contact Details:</h2>
+            <label for="profilePicture">Profile Picture:</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter your title" required>
+
+            <label for="profileDescription">Profile Description:</label>
+            <textarea id="profileDescription" name="profileDescription" placeholder="Enter a brief profile description"
+                required>I am a highly motivated individual with a strong work ethic and a passion for achieving excellence. My enthusiasm for learning and problem-solving drives me to continually improve and excel in all my endeavors.</textarea>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+
+
+            <!-- Education section -->
+            <h2>EDUCATION:</h2>
+            <div id="educationContainer">
+                <div class="education-entry">
+                    <input type="text" name="educationTitle" placeholder="Education Title" required><br />
+                    <input type="text" name="educationField" placeholder="Education Field" required><br />
+                    <input type="text" name="educationInstitution" placeholder="Institution" required><br />
+                    <input type="text" name="educationYear" placeholder="Year" required><br />
+                </div>
+            </div>
+            <button type="button" id="addEducationBtn" class="toggle-button">+ Add Education</button>
+
+
+            <!-- Skills section -->
+            <h2>SKILLS:</h2>
+            <div id="skillsContainer">
+                <div class="skills-entry">
+            <input type="text" name="skill" placeholder="Enter a skill" required>
+        </div>
+            </div>
+            <button type="button" id="addSkillBtn" class="toggle-button">+ Add Skill</button><br />
+
+            <!-- Experience section -->
+            <h2>EXPERIENCE:</h2>
+            <div id="experienceContainer">
+                <div class="experience-entry">
+                <input type="text" name="experienceTitle" placeholder="Job Title" required><br />
+                <input type="text" name="experienceLocation" placeholder="Location" required><br />
+                <input type="text" name="experienceYear" placeholder="Duration" required><br />
+                <textarea name="experienceDescription" placeholder="Experience Description" required></textarea><br />
+            </div>
+        </div>
+            <button type="button" id="addExperienceBtn" class="toggle-button">+ Add Experience</button><br />
+
+            <!-- Generate Resume Button -->
+            <div class="button-container">
+                <button type="button" id="generateResumeBtn" class="resume-btn">Generate Resume</button>
+            </div>
+        </form>
+
+        <div id="resumeSection" style="display:none;"></div>
+
+    </section>
+
+    <!-- Buttons for download and share -->
+    <div class="download-btn">
+        <!--Hide the PDF button initially-->
+        <button type="button" id="downloadpdfBtn" style="display: none;" class="downloadpdfBtn">Download PDF</button>
+        <button type="button" id="shareLink" style="display: none;" class="shareLink">Share Link</button>
+    </div>
+
+
+
+    <script src="form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.myResume {
+    font-family: Arial, sans-serif;
+    background-color: #024fc4;
+    color: #333;
+    line-height: 1.6;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding:10px  0;
+    margin: 0;
+}
+
+/* Blue theme styling */
+/* Heading Section Styling */
+.myResume-header {
+    padding: 30px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 15px auto;
+    width: fit-content;
+    justify-content: space-between; 
+}
+
+/* Heading Style */
+.myResume-header h1 {
+    font-size: 3rem; 
+    color: #ffffff;
+    font: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);    
+}
+
+/* /* Paragraph Style   i remove a paragraph, acha nhi lg rha tha ,,,  */
+/* .myResume-header p { 
+    font-size: 1.3rem;
+    color: #ffffff; 
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0.5px; 
+} */
+ /** Resume section*/
+
+.myResume-container {
+    display: flex;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    border: 1px solid #ccc;
+    max-width : 1000px;
+    margin-bottom: 70px;
+}
+.myResume-left-section {
+    width: 30%;
+    padding: 20px;
+    background-color: #f0f4f8;
+    text-align: center;
+}
+
+.myResume-profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgb(48, 48, 53);
+}
+.myResume-contact-details, .myResume-skills {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.myResume-contact-details h3, .myResume-skills h3 {
+    color: #01245a;
+}
+
+.myResume-skills ul , .myResume-experience ul , .myResume-education ul{
+    list-style-type: disc; 
+    padding-left: 20px; 
+    margin-top: 5px;
+}
+
+.myResume-skills li, .myResume-experience li, .myResume-education li{
+    margin-bottom: 5px;
+}
+
+.myResume-right-section {
+    width: 70%;
+    padding: 20px;
+}
+
+.myResume-right-section h1 {
+    margin-top: 30px;
+    font-size: 40px;
+    color: #003366;
+    margin-bottom: 5px;
+    text-align: center;
+    justify-content: center;
+}
+
+.myResume-right-section h2 {
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #666666;
+    margin-bottom: 55px;
+
+}
+
+.myResume-right-section h3 {
+    color: #01245a;
+    margin-bottom: 10px;
+}
+
+.myResume-right-section p {
+    margin-bottom: 10px;
+}
+
+.myResume-profile, .myResume-education, .myResume-experience {
+    margin-bottom: 20px;
+}
+
+.myResume-toggle-btn {
+    background-color: #024fc4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.myResume-toggle-btn:hover {
+    background-color: #1473d1;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets and smaller screens (max-width: 768px) */
+@media (max-width : 768px) {
+    .myResume-header h1 {
+        font-size: 2.3rem;
+    }
+    .myResume-container {
+        width: 95%;
+    }
+    
+    .myResume-left-section {
+        width: 35%;
+    }
+
+    .myResume-right-section {
+       width: 65%; 
+    }
+
+    .myResume-profile-pic {
+        width: 130px;
+        height: 130px;
+    }
+
+    .myResume-right-section{
+        width: 65%;
+
+    }
+    
+    .myResume-right-section h1 {
+        font-size: 30px; 
+    }
+    
+    .myResume-right-section h2 {
+        font-size: 13px;
+    }
+
+    .myResume-contact-details h3, .myResume-skills h3 , .myResume-profile h3, .myResume-experience h3, .myResume-education h3{
+        font-size: 15px;
+    }
+
+    .myResume-contact-details p , .myResume-skills li, .myResume-profile li, .myResume-experience li, .myResume-education li , .myResume-profile p {
+        font-size: 10px;
+    }
+
+}
+
+/* For small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .myResume-header h1 {
+        font-size: 2rem; 
+    }
+    .myResume-header p{
+        font-size: 0.9rem;
+    }
+
+    .myResume-container {
+        width: 95%;
+    }
+    
+    .myResume-left-section {
+        width: 35%; 
+        padding: 8px;
+    }
+
+    .myResume-right-section {
+       width: 65%; 
+    }
+
+    .myResume-profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
+    }
+    
+    .myResume-right-section h1 {
+        font-size: 27px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    
+    .myResume-right-section h2 {
+        font-size: 11px; 
+        margin-bottom: 25px;
+    }
+
+    .myResume-contact-details h3, .myResume-skills h3 {
+        font-size: 9px;
+    }
+
+    .myResume-contact-details p , .myResume-skills li, .myResume-profile li, .myResume-experience li, .myResume-education li , .myResume-profile p {
+        font-size: 7px;
+    }
+
+    .myResume-profile h3, .myResume-experience h3, .myResume-education h3 {
+        font-size: 11px;
+    }
+
+}
+
+ 

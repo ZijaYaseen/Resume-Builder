@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2015",       // Specifies ECMAScript target version (ES2015 and above)
+    "lib": ["es2015", "dom"], // Includes the ES2015 standard library and DOM definitions
+    "module": "commonjs",     // Specify module code generation
+    "strict": true,           // Enable all strict type-checking options
+    "esModuleInterop": true,  // Ensure compatibility with CommonJS and ES modules
+    "skipLibCheck": true,     // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true // Enforce consistent file casing
+  },
+  "include": [
+    "index.ts", "createResume/form.ts" // Include the specific TypeScript files in your root folder
+  ],
+  "exclude": [
+    "node_modules", "dist" // Exclude folders not needed for compilation
+  ]
+}
