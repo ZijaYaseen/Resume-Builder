@@ -9,7 +9,7 @@
     "forceConsistentCasingInFileNames": true // Enforce consistent file casing
   },
   "include": [
-    "index.ts", "form.ts" // Include the specific TypeScript files in your root folder
+    "index.ts", "createResume/form.ts" // Include the specific TypeScript files in your root folder
   ],
   "exclude": [
     "node_modules", "dist" // Exclude folders not needed for compilation

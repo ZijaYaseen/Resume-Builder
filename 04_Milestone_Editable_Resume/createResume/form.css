@@ -30,7 +30,7 @@ body {
 
 /* Headings */
 .resume-info h1 {
-    color: #01245a; 
+    color: #024fc4; 
     text-align: center;
     font-size: 3rem; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
@@ -38,7 +38,7 @@ body {
 }
 
 .resume-info h2 {
-    color: #01245a; 
+    color: #024fc4; 
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -61,7 +61,7 @@ form input {
 
 /*Resume button in center*/
 .resume-btn {
-    background-color: #01245a;
+    background-color: #024fc4;
     color: #ffffff;
     font-size: 1.2rem;
     padding: 12px 20px;
@@ -76,7 +76,7 @@ form input {
 }
 
 .resume-btn:hover {
-    background-color: #516c96;
+    background-color: #1473d1;
 }
 
 .button-container {
@@ -90,8 +90,19 @@ form input {
 }
 
 .toggle-button {
-    margin: 0;
+    background-color: #024fc4;
+    padding: 0;
+    margin: 10px 0;
     margin-bottom: 10px;
+    color: #f7f7f7;
+    font-size: 14px;
+    border: none;
+    width: 130px;
+    height: 35px;
+    }
+
+    .toggle-button:hover{
+        background-color: #1473d1;
     }
 
 
@@ -186,7 +197,7 @@ textarea[name="experienceDescription"] {
 
 }
 
- /* user Main resume box */
+ /* dynamic Main resume box */
  .resume-box {
     display: flex;
     flex-direction: row;
@@ -242,6 +253,9 @@ textarea[name="experienceDescription"] {
     text-align: left;
     margin-top: 20px;
 }
+.skills h3{
+    color: #024fc4;
+}
 
 .skills ul {
     list-style-type: disc; /* Bullet points .... styling dot */
@@ -257,7 +271,7 @@ textarea[name="experienceDescription"] {
 .right-section h1 {
     margin-top: 20px;
     font-size: 35px;
-    color: #0d3c61;
+    color: #024fc4;
     font-weight: bold;
 }
 
@@ -270,7 +284,7 @@ textarea[name="experienceDescription"] {
 
 .right-section h2, .contact h3 {
     font-size: 20px;
-    color: #0d3c61;
+    color: #024fc4;
     margin-top: 20px;
 }
 

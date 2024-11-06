@@ -32,21 +32,40 @@
             <label for="phone">Phone:</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
     
-            <!-- Education section -->
-            <h2>EDUCATION:</h2>
-            <div id="educationContainer"></div>
-            <button type="button" id="addEducationBtn" class="toggle-button">+ Add Education</button>
-    
-            <!-- Skills section -->
-            <h2>SKILLS:</h2>
-            <div id="skillsContainer"></div>
-            <button type="button" id="addSkillBtn" class="toggle-button">+ Add Skill</button><br />
-    
-            <!-- Experience section -->
-            <h2>EXPERIENCE:</h2>
-            <div id="experienceContainer"></div>
-            <button type="button" id="addExperienceBtn" class="toggle-button">+ Add Experience</button><br />
-    
+             <!-- Education section -->
+             <h2>EDUCATION:</h2>
+             <div id="educationContainer">
+                 <div class="education-entry">
+                     <input type="text" name="educationTitle" placeholder="Education Title" required><br />
+                     <input type="text" name="educationField" placeholder="Education Field" required><br />
+                     <input type="text" name="educationInstitution" placeholder="Institution" required><br />
+                     <input type="text" name="educationYear" placeholder="Year" required><br />
+                 </div>
+             </div>
+             <button type="button" id="addEducationBtn" class="toggle-button">+ Add Education</button>
+ 
+ 
+             <!-- Skills section -->
+             <h2>SKILLS:</h2>
+             <div id="skillsContainer">
+                 <div class="skills-entry">
+             <input type="text" name="skill" placeholder="Enter a skill" required>
+         </div>
+             </div>
+             <button type="button" id="addSkillBtn" class="toggle-button">+ Add Skill</button><br />
+ 
+             <!-- Experience section -->
+             <h2>EXPERIENCE:</h2>
+             <div id="experienceContainer">
+                 <div class="experience-entry">
+                 <input type="text" name="experienceTitle" placeholder="Job Title" required><br />
+                 <input type="text" name="experienceLocation" placeholder="Location" required><br />
+                 <input type="text" name="experienceYear" placeholder="Duration" required><br />
+                 <textarea name="experienceDescription" placeholder="Experience Description" required></textarea><br />
+             </div>
+         </div>
+             <button type="button" id="addExperienceBtn" class="toggle-button">+ Add Experience</button><br />
+ 
             <!-- Generate Resume Button -->
             <div class="button-container">
                 <button type="button" id="generateResumeBtn" class="resume-btn">Generate Resume</button>

@@ -5,14 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Resume Builder</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="myResume.css">
 </head>
 <body>
-    <section class="header">
-        <h1>Dynamic Interactive Resume Builder</h1>
-        <p>Design Your Perfect Resume With Our Easy-To-Use Dynamic Interactive Resume Builder</p>
-        <img src="./assets/resume.png" alt="Resume Template">
-        <button id="startBtn" class="button">Create My Resume</button>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h2>Resume Builder</h2>
+        </div>
+        <div class="nav-right-container">
+            <ul class="nav-right">
+                <div class="close-btn" onclick="toggleMenu()">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/delete-sign.png" alt="Close Icon" />
+                </div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#createResume" id="navStartBtn">Create Resume</a></li>
+                <li><a href="#myResume">My Resume</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <!-- Hamburger icon for mobile view -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <img src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png" alt="Menu Icon" />
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Main Header Section -->
+    <div class="header" id="home">
+        <div class="header-content">
+            <h1>Dynamic Interactive Resume Builder</h1>
+            <p>Design Your Perfect Resume With Our Easy-To-Use Dynamic Interactive Resume Builder</p>
+            <button  id="headerStartBtn" class="button">Create My Resume</button>
+        </div>
+
+        <div class="header-image">
+            <img src="./assets/template.jpeg" alt="Resume Template">
+        </div>
+    </div>
+
+    <!-------------------------------------------Staatic My Resume Section--------------------------------------->
+
+     <!-- Profile Section -->
+     <section class="myResume" id="myResume">
+        <div class="myResume-header">
+        <h1>Static Interactive Resume Builder</h1>
+    </div>
+      <!--- resume section...-->
+
+      <div class="myResume-container">
+        <div class="myResume-left-section">
+            <img src="./assets/Porofile-picture.jpeg" alt="Profile Picture" class="myResume-profile-pic">
+            <div class="myResume-contact-details">
+                <h3>CONTACT DETAILS:</h3>
+                <p>Email: <a href="mailto:zijayaseen15@gmail.com">zijayaseen15@gmail.com</a></p>
+                <p>Phone: +92 3160426977</p>
+            </div>
+            <div id="skills-section" class="myResume-skills">
+                <h3>SKILLS:</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS(Cascading Style Sheet)</li>
+                    <li>TypeScript</li>
+                    <li>JavaScript</li>
+                    <li>Next.js</li>
+                    <li>React.js</li>
+                    <li>Tailwind CSS</li>
+                    <li>MS Office</li>
+                    <li>Outlook</li>
+                </ul>
+            </div>
+        </div>
+        <div class="myResume-right-section">
+            <h1>Zija Yaseen</h1>
+            <h2>Frontend Web Developer</h2>
+            <div class="myResume-profile">
+                <h3>PROFILE:</h3>
+                <p>I am a highly motivated individual with a strong work ethic and a passion for achieving excellence. My enthusiasm for learning and problem-solving drives me to continually improve and excel in all my endeavors.</p>
+            </div>
+            <div id="education-section" class="myResume-education">
+                <h3>EDUCATION:</h3>
+                <ul>
+                    <li>Bachelor in Computer Science, Karachi University -- Continue.</li>
+                    <li>Intermediate in Medical Science, Board of Intermediate Education Karachi -- 2023.</li>
+                    <li>Matriculation in Medical Science, Board of Secondary Education Karachi -- 2021.</li>
+                </ul>
+            </div>
+            <div id="experience-section" class="myResume-experience">
+                <h3>EXPERIENCE:</h3>
+                <ul>
+                    <li>I completed a 1-month remote internship at CodSoft, where I gained practical experience in web development, working on projects that enhanced my skills in HTML, CSS, JavaScript, and TypeScript.</li>
+                    <li>I completed a 1-month remote internship at CodAlpha, where I was involved in various development tasks, improving my knowledge of web technologies and collaborating on real-world projects.</li>
+                </ul>
+            </div>
+            <button id="toggleButton" class="myResume-toggle-btn">Show More</button>
+        </div>
+    </div>
+
     </section>
+
+
+
+<!-- Contact Us Section -->
+<section class="contact-us" id="contact">
+    <div class="contact-content">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to reach out. We're here to help you to build your resume!</p>
+        <form action="#" class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            
+            <button type="submit" class="button">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!----------------------------------------------FOOTER SECTION--------------------------------------->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>Resume Builder</h2>
+                <p>Start building your resume today and take the first step toward your dream career.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Content</h3>
+                <ul>
+                    <li>Simple and Professional</li>
+                    <li>Modern</li>
+                    <li>Creative</li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>Follow Us</h3>
+                <div class="social-media">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" />
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter-squared.png" alt="Twitter" />
+                    </a>
+                    <a href="https://linkedin.com" target="_blank">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" />
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-rights">
+        <p>&copy; Developer Zija Yaseen | 2024 Resume Builder. All rights reserved.</p>
+    </div>
+    </footer>
+
+    
+    
 
     <script src="index.js"></script>
 </body>

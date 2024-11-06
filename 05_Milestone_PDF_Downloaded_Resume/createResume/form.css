@@ -256,6 +256,9 @@ textarea[name="experienceDescription"] {
     text-align: left;
     margin-top: 20px;
 }
+.skills h3{
+    color: #024fc4;
+}
 
 .skills ul {
     list-style-type: disc; /* Bullet points .... styling dot */

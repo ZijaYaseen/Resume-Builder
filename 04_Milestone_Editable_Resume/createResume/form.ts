@@ -10,25 +10,29 @@ document.addEventListener('DOMContentLoaded', () => {
         generateResume();
     });
 
-    // Adding education details
+    // Function to add new education fields
     function addEducation(): void {
         const educationContainer = document.getElementById('educationContainer') as HTMLElement;
         const educationDiv = document.createElement('div');
+        educationDiv.className = 'education-entry';
         educationDiv.innerHTML = `
             <input type="text" name="educationTitle" placeholder="Education Title" required><br />
             <input type="text" name="educationField" placeholder="Education Field" required><br />
             <input type="text" name="educationInstitution" placeholder="Institution" required><br />
             <input type="text" name="educationYear" placeholder="Year" required><br />
-            <button type="button" class="remove-btn">- Remove Education</button>
+            <button type="button" class="remove-btn">- Remove Education</button><br>
         `;
         educationContainer.appendChild(educationDiv);
+
+        // Add event listener for the remove button
         educationDiv.querySelector('.remove-btn')?.addEventListener('click', () => educationDiv.remove());
     }
 
-    // Adding skills
+    // Function to add new skill fields
     function addSkill(): void {
         const skillsContainer = document.getElementById('skillsContainer') as HTMLElement;
         const skillDiv = document.createElement('div');
+        skillDiv.className = 'skills-entry'
         skillDiv.innerHTML = `
             <input type="text" name="skill" placeholder="Enter a skill" required>
             <button type="button" class="remove-btn">- Remove Skill</button>
@@ -37,16 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
         skillDiv.querySelector('.remove-btn')?.addEventListener('click', () => skillDiv.remove());
     }
 
-    // Adding experience details
+    // Function to add new experience fields
     function addExperience(): void {
         const experienceContainer = document.getElementById('experienceContainer') as HTMLElement;
         const experienceDiv = document.createElement('div');
+        experienceDiv.className = 'experience-entry'
         experienceDiv.innerHTML = `
             <input type="text" name="experienceTitle" placeholder="Job Title" required><br />
             <input type="text" name="experienceLocation" placeholder="Location" required><br />
             <input type="text" name="experienceYear" placeholder="Duration" required><br />
             <textarea name="experienceDescription" placeholder="Experience Description" required></textarea><br />
-            <button type="button" class="remove-btn">- Remove Experience</button>
+            <button type="button" class="remove-btn">- Remove Experience</button><br>
         `;
         experienceContainer.appendChild(experienceDiv);
         experienceDiv.querySelector('.remove-btn')?.addEventListener('click', () => experienceDiv.remove());
@@ -106,30 +111,30 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="resume-box">
             <div class="left-section">
                 ${profilePictureUrl ? `<img src="${profilePictureUrl}" alt="Profile Picture" class="profile-pic">` : ''}
-                <div class="contact" contenteditable="true">
-                    <h3>CONTACT DETAILS:</h3>
-                    <p>Email: <a href="mailto:${email}">${email}</a></p>
-                    <p>Phone: <a href="tel:${phone}">${phone}</a></p>
+                <div class="contact">
+                    <h3 contenteditable="true">CONTACT DETAILS:</h3>
+                    <p contenteditable="true">Email: <a href="mailto:${email}">${email}</a></p>
+                    <p contenteditable="true">Phone: <a href="tel:${phone}">${phone}</a></p>
                 </div>
-                <div class="skills" contenteditable="true">
-                    <h3>SKILLS:</h3>
-                    <ul>${skills.map(skill => `<li>${skill}</li>`).join('')}</ul>
+                <div class="skills">
+                    <h3 contenteditable="true">SKILLS:</h3>
+                    <ul contenteditable="true">${skills.map(skill => `<li contenteditable="true">${skill}</li>`).join('')}</ul>
                 </div>
             </div>
             <div class="right-section">
                 <h1 contenteditable="true">${name.toUpperCase()}</h1>
                 <p class="title" contenteditable="true">${title}</p>
-                <div class="profile-description" contenteditable="true">
-                    <h2>PROFILE:</h2>
-                    <p>${profileDescription}</p>
+                <div class="profile-description">
+                    <h2 contenteditable="true">PROFILE:</h2>
+                    <p contenteditable="true">${profileDescription}</p>
                 </div>
-                <div class="education" contenteditable="true">
-                    <h2>EDUCATION:</h2>
-                     <ul>${education.map(edu => `<li> ${edu}</li>`).join('\n')}</ul>
+                <div class="education">
+                    <h2 contenteditable="true">EDUCATION:</h2>
+                     <ul contenteditable="true">${education.map(edu => `<li contenteditable="true"> ${edu}</li>`).join('\n')}</ul>
                 </div>
-                <div class="experience" contenteditable="true">
-                    <h2>EXPERIENCE:</h2>
-                    <ul> ${experiences.map(exp => `<li>${exp}</li>`).join('\n')}</ul>
+                <div class="experience">
+                    <h2 contenteditable="true">EXPERIENCE:</h2>
+                    <ul contenteditable="true"> ${experiences.map(exp => `<li contenteditable="true">${exp}</li>`).join('\n')}</ul>
                 </div>
             </div>
         </div>
