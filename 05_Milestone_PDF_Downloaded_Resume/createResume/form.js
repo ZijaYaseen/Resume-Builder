@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         generateResume();
     });
+    downloadpdfBtn.addEventListener('click', () => {
+        window.print();
+    });
     // Hide the Download PDF and Share Link buttons initially
     downloadpdfBtn.style.display = 'none';
     shareLink.style.display = 'none';
