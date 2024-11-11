@@ -15,19 +15,26 @@ body {
     justify-content: center; 
     min-height: 100vh;
     align-items: center; /* Vertically center */
+    justify-content: center;
     flex-direction: column; /*for vertical align the page element.*/
     
 }
-
 /* Form container */
-.resume-info {
-    max-width: 800px;
+
+#resumeForm {
+    min-width: 900px;
     width: 100%;
     padding: 20px;
     background-color: #f7f7f7; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     text-align: left;
+
+}
+
+#resumeSection {
+    max-width: 800px;
+    width: 100%;
 }
 
 /* Headings */
@@ -395,26 +402,32 @@ textarea[name="experienceDescription"] {
 }
 
 @media print {
-
     @page {
-        size: A4 portrait; 
+        size: portrait;
+        margin: 0;
     }
 
     body {
         padding: 0;
         margin: 0;
-        page-break-inside: avoid; 
-        /* for background color */
-        -webkit-print-color-adjust: exact; /* Chrome, Safari */
-        -moz-print-color-adjust: exact; /* Firefox */
-        print-color-adjust: exact; /* Standard */
-        width: 210mm;
-        height: 297mm;
-      }
+        display: block; /* Ensure it's not using flexbox in print */
+    }
 
-      .left-section {
-        background-color: #f0f4f8;
-      }
+    #resumeSection {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        min-width: 1050px;
+        page-break-inside: avoid;
+        page-break-after: avoid;
+        page-break-before: avoid;
+
+        /* Ensure it's aligned to the top */
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 0; /* Remove any top margin */
+    }
 
     #downloadpdfBtn {
         display: none !important; /* Forcefully hide the button during print */
