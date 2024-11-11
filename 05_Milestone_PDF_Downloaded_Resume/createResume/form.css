@@ -145,7 +145,7 @@ textarea[name="experienceDescription"] {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .resume-info {
+    .resumeForm {
         padding: 15px;
     }
 
@@ -168,8 +168,9 @@ textarea[name="experienceDescription"] {
         padding: 10px; 
     }
 
-    .resume-info {
-        padding: 10px;
+    #resumeForm{
+        min-width:0px;
+        
     }
 
     .resume-info h1 {
@@ -187,7 +188,7 @@ textarea[name="experienceDescription"] {
 }
 
 @media (max-width: 360px) {
-    .resume-info {
+    .resumeForm {
         padding: 5px; 
     }
 
